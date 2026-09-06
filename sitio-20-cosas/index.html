@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 Things About Me</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>20 Things About Me</h1>
+      <p class="byline">Santiago Orozco Echeverry— English class project</p>
+    </header>
+
+    <section class="content">
+      <article class="pdf-card">
+        <div class="pdf-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 60" width="52" height="65">
+            <path d="M6 2h24l12 12v44a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M30 2v12h12" fill="none" stroke="currentColor" stroke-width="2"/>
+            <text x="24" y="41" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="11" font-weight="600" fill="currentColor">PDF</text>
+          </svg>
+        </div>
+        <h2>Video Script</h2>
+        <p>The full script of the 20 things, in English with its translation.</p>
+        <a class="btn-primary" href="guion.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="link-secondary" href="guion.pdf" download>Download PDF</a>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame" id="videoFrame">
+          <video id="video" src="video.mp4" playsinline></video>
+
+          <button class="play-overlay" id="playOverlay" aria-label="Play">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+          </button>
+
+          <div class="controls" id="controls">
+            <div class="progress" id="progress">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="controls-row">
+              <button id="skipBack" aria-label="Rewind 10 seconds">
+                <svg viewBox="0 0 24 24" width="17" height="17"><path d="M12 5V1L7 6l5 5V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z" fill="currentColor"/></svg>
+              </button>
+              <button id="playPause" aria-label="Play or pause">
+                <svg id="iconPlay" viewBox="0 0 24 24" width="17" height="17"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                <svg id="iconPause" viewBox="0 0 24 24" width="17" height="17" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg>
+              </button>
+              <button id="skipForward" aria-label="Forward 10 seconds">
+                <svg viewBox="0 0 24 24" width="17" height="17"><path d="M12 5V1l5 5-5 5V7a5 5 0 1 0 5 5h2a7 7 0 1 1-7-7z" fill="currentColor"/></svg>
+              </button>
+              <span class="time" id="time">0:00 / 0:00</span>
+              <button id="mute" aria-label="Mute or unmute">
+                <svg id="iconSound" viewBox="0 0 24 24" width="17" height="17"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/></svg>
+                <svg id="iconMute" viewBox="0 0 24 24" width="17" height="17" style="display:none"><path d="M4 9v6h4l5 5V4L8 9H4zm12.5 3L19 9.5 17.6 8 15 10.6 12.4 8 11 9.5 13.6 12 11 14.5 12.4 16 15 13.4 17.6 16 19 14.5z" fill="currentColor"/></svg>
+              </button>
+              <button id="fullscreen" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" width="17" height="17"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      <p>Video recorded for English class — "20 Things About Me".</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
